@@ -52,15 +52,10 @@ Page {
                 }
             }
 
-            GlowSeparator {
-
-            }
-
             TextArea {
                 id: urlArea
                 visible: text.length > 0
                 font.pixelSize: Theme.fontSizeMedium
-                //color: Theme.secondaryColor
                 wrapMode: Text.WrapAnywhere
                 anchors {
                     left: parent.left

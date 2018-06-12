@@ -118,9 +118,11 @@ QList<QVariant> HistoryModel::createRangeList()
 
     int i = 0;
 
+
+    QLocale locale = QLocale(QLocale::English, QLocale::UnitedStates);
     while (++i <= 5) {
         map.clear();
-        map["name"] = dtbeginCurrentMonth.addMonths(-i + 1).toString("MMMM");
+        map["name"] = locale.toString(dtbeginCurrentMonth.addMonths(-i + 1), "MMMM");
         map["start"] = dtbeginCurrentMonth.addMonths(-i).toTime_t();
         map["end"] = dtbeginCurrentMonth.addMonths(-i + 1).toTime_t();
         map["index"] = 3 + i;

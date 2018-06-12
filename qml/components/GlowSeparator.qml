@@ -4,6 +4,8 @@ import Sailfish.Silica 1.0
 Item {
     width: parent.width
     height: Theme.paddingMedium
+    property color recColor: Theme.highlightColor
+
     Rectangle {
         anchors.centerIn: parent
         rotation: 90
@@ -16,7 +18,7 @@ Item {
             }
             GradientStop {
                 position: 0.50;
-                color: Theme.secondaryColor;
+                color: recColor
             }
             GradientStop {
                 position: 1.00;

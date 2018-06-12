@@ -67,6 +67,21 @@ Page {
                 }
             }
 
+            SectionHeader {
+                text: "Icon"
+            }
+
+            LinkedLabel {
+                anchors {
+                    left: parent.left
+                    leftMargin: Theme.paddingMedium
+                    right: parent.right
+                    rightMargin: Theme.paddingMedium
+                }
+                wrapMode: Text.Wrap
+                text: "Original icon made by <a href=\"https://www.flaticon.com/authors/hadrien\" title=\"Hadrien\">Hadrien</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a> is licensed by CC 3.0 BY"
+            }
+
 
         }
     }
