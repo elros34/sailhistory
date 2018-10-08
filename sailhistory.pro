@@ -16,13 +16,17 @@ CONFIG += sailfishapp
 
 QT += sql
 
+PKGCONFIG += contentaction5
+INCLUDEPATH += /usr/include
+
 DEFINES += QT_NO_DEBUG_OUTPUT
 
 SOURCES += \
     src/main.cpp \
     src/historymodel.cpp \
     src/historyitem.cpp \
-    src/historyfilter.cpp
+    src/historyfilter.cpp \
+    src/mimehandler.cpp
 
 DISTFILES += qml/sailhistory.qml \
     qml/cover/CoverPage.qml \
@@ -30,7 +34,6 @@ DISTFILES += qml/sailhistory.qml \
     rpm/sailhistory.changes.in \
     rpm/sailhistory.changes.run.in \
     rpm/sailhistory.spec \
-    rpm/sailhistory.yaml \
     translations/*.ts \
     sailhistory.desktop \
     qml/pages/HistoryPage.qml \
@@ -51,4 +54,5 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128
 HEADERS += \
     src/historymodel.h \
     src/historyitem.h \
-    src/historyfilter.h
+    src/historyfilter.h \
+    src/mimehandler.h

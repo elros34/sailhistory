@@ -222,7 +222,7 @@ Page {
                 MenuItem {
                     text: "Open url"
                     onClicked: {
-                        Qt.openUrlExternally(model.url)
+                        mimeHandler.openUrl(model.url)
                     }
                 }
             }

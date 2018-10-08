@@ -48,5 +48,9 @@ ApplicationWindow
         id: historyFilter
         sourceModel: historyModel
     }
+
+    MimeHandler {
+        id: mimeHandler
+    }
 }
 
