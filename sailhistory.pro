@@ -16,17 +16,18 @@ CONFIG += sailfishapp
 
 QT += sql
 
-PKGCONFIG += contentaction5
-INCLUDEPATH += /usr/include
-
 DEFINES += QT_NO_DEBUG_OUTPUT
 
 SOURCES += \
     src/main.cpp \
     src/historymodel.cpp \
     src/historyitem.cpp \
-    src/historyfilter.cpp \
-    src/mimehandler.cpp
+    src/historyfilter.cpp
+
+HEADERS += \
+    src/historymodel.h \
+    src/historyitem.h \
+    src/historyfilter.h
 
 DISTFILES += qml/sailhistory.qml \
     qml/cover/CoverPage.qml \
@@ -51,8 +52,3 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128
 # modify the localized app name in the the .desktop file.
 # TRANSLATIONS += translations/sailhistory-de.ts
 
-HEADERS += \
-    src/historymodel.h \
-    src/historyitem.h \
-    src/historyfilter.h \
-    src/mimehandler.h

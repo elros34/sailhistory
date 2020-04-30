@@ -24,7 +24,7 @@ Page {
             MenuItem {
                 text: "Open url"
                 onClicked: {
-                    mimeHandler.openUrl(page.url)
+                    Qt.openUrlExternally(page.url)
                 }
             }
         }

@@ -199,6 +199,13 @@ Page {
 
             menu: ContextMenu {
                 MenuItem {
+                    text: "Open url"
+                    onClicked: {
+                        Qt.openUrlExternally(model.url)
+                    }
+                }
+
+                MenuItem {
                     text: "Remove"
                     onClicked: {
                         var p = bottomBar
@@ -216,13 +223,6 @@ Page {
                     text: "Copy url to clipboard"
                     onClicked: {
                         Clipboard.text = model.url
-                    }
-                }
-
-                MenuItem {
-                    text: "Open url"
-                    onClicked: {
-                        mimeHandler.openUrl(model.url)
                     }
                 }
             }

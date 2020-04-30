@@ -69,7 +69,7 @@ void HistoryModel::initHistoryModel()
         }
     }
     endResetModel();
-    qSort(m_rangeList.begin(), m_rangeList.end(), lessThen);
+    qSort(m_rangeList.begin(), m_rangeList.end(), lessThan);
 
     emit rangeListChanged();
 
@@ -130,7 +130,7 @@ QList<QVariant> HistoryModel::createRangeList()
     }
 
     map.clear();
-    map["name"] = "Older then 6 months";
+    map["name"] = "Older than 6 months";
     map["start"] = 0;
     map["end"] = dtbeginCurrentMonth.addMonths(-5).toTime_t();
     map["index"] = 9;
@@ -218,7 +218,7 @@ void HistoryModel::remove(int i, const QString &id)
     query.exec("DELETE FROM browser_history WHERE id = " + id);
 }
 
-bool HistoryModel::lessThen(const QVariant &a, const QVariant &b)
+bool HistoryModel::lessThan(const QVariant &a, const QVariant &b)
 {
     return a.toMap()["index"].toInt() < b.toMap()["index"].toInt();
 }

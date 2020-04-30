@@ -21,7 +21,7 @@ public:
     Q_INVOKABLE void refresh();
     Q_INVOKABLE void remove(int i, const QString &id);
 
-    static bool lessThen(const QVariant &a, const QVariant &b);
+    static bool lessThan(const QVariant &a, const QVariant &b);
 
 public:
     enum myRoles {

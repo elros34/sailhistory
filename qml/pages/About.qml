@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 
 Page {
@@ -37,12 +37,67 @@ Page {
             }
 
             SectionHeader {
-                text: "Author"
+                text: "Authors"
             }
 
-            Label {
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: "elros34"
+            Row {
+                width: column.width
+                height: codeLabel.height
+                leftPadding: Theme.paddingMedium
+                spacing: Theme.paddingMedium
+                Label {
+                    id: codeLabel
+                    text: "Code"
+                    color: Theme.highlightColor
+                }
+                Label {
+                    text: "elros34 - BSD"
+                }
+            }
+            Row {
+                width: column.width
+                height: codeLabel.height
+                leftPadding: Theme.paddingMedium
+                spacing: Theme.paddingMedium
+                Label {
+                    id: codeLabel2
+                    text: "Code"
+                    color: Theme.highlightColor
+                }
+                Label {
+                    text: "Jolla Ltd. - BSD"
+                }
+            }
+
+            Item {
+                width: column.width
+                height: Math.max(iconLabel.height, iconLabel2.height)
+                Label {
+                    id: iconLabel
+                    text: "Icon"
+                    color: Theme.highlightColor
+                    anchors {
+                        left: parent.left
+                        leftMargin: Theme.paddingMedium
+                    }
+                }
+                Label {
+                    id: iconLabel2
+                    text: "based on Hadrien (CC 3.0 BY) design"
+                    anchors {
+                        left: iconLabel.right
+                        leftMargin: Theme.paddingMedium
+                        right: parent.right
+                    }
+                    wrapMode: Text.Wrap
+                }
+                BackgroundItem {
+                    width: column.width
+                    height: parent.height
+                    onClicked: {
+                        Qt.openUrlExternally("https://www.flaticon.com/authors/hadrien")
+                    }
+                }
             }
 
             SectionHeader {
@@ -66,23 +121,6 @@ Page {
                     Qt.openUrlExternally("https://paypal.me/sfoselro/5")
                 }
             }
-
-            SectionHeader {
-                text: "Icon"
-            }
-
-            LinkedLabel {
-                anchors {
-                    left: parent.left
-                    leftMargin: Theme.paddingMedium
-                    right: parent.right
-                    rightMargin: Theme.paddingMedium
-                }
-                wrapMode: Text.Wrap
-                text: "Original icon made by <a href=\"https://www.flaticon.com/authors/hadrien\" title=\"Hadrien\">Hadrien</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a> is licensed by CC 3.0 BY"
-            }
-
-
         }
     }
 }

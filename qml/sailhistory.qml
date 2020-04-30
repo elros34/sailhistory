@@ -1,6 +1,5 @@
 /*
-  Copyright (C) 2013 Jolla Ltd.
-  Contact: Thomas Perl <thomas.perl@jollamobile.com>
+  Copyright (C) 2020 elros34
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -47,10 +46,6 @@ ApplicationWindow
     HistoryFilter {
         id: historyFilter
         sourceModel: historyModel
-    }
-
-    MimeHandler {
-        id: mimeHandler
     }
 }
 

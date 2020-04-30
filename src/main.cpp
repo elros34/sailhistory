@@ -1,6 +1,5 @@
 /*
-  Copyright (C) 2013 Jolla Ltd.
-  Contact: Thomas Perl <thomas.perl@jollamobile.com>
+  Copyright (C) 2020 elros34
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -33,14 +32,12 @@
 #include <sailfishapp.h>
 #include "historymodel.h"
 #include "historyfilter.h"
-#include "mimehandler.h"
 
 
 int main(int argc, char *argv[])
 {
     qmlRegisterType<HistoryModel>("Sail.History", 1, 0, "HistoryModel");
     qmlRegisterType<HistoryFilter>("Sail.History", 1, 0, "HistoryFilter");
-    qmlRegisterType<MimeHandler>("Sail.History", 1, 0, "MimeHandler");
 
     return SailfishApp::main(argc, argv);
 }
