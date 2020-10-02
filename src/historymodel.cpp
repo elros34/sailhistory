@@ -5,6 +5,7 @@
 #include <QElapsedTimer>
 #include <QDateTime>
 #include <QTimer>
+#include <QStandardPaths>
 
 HistoryModel::HistoryModel()
 {
@@ -22,7 +23,8 @@ void HistoryModel::initHistoryModel()
     QElapsedTimer t;
     t.start();
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("/home/nemo/.local/share/org.sailfishos/sailfish-browser/sailfish-browser.sqlite");
+    QString userDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
+    db.setDatabaseName(userDir + "/.local/share/org.sailfishos/sailfish-browser/sailfish-browser.sqlite");
     db.open();
 
     QSqlQuery query;

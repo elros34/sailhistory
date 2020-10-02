@@ -34,7 +34,6 @@ Page {
         Connections {
             target: historyModel
             onRangeListChanged: {
-                console.log("r")
                 listView.model = historyModel.rangeList()
             }
         }

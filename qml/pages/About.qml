@@ -99,28 +99,6 @@ Page {
                     }
                 }
             }
-
-            SectionHeader {
-                text: "Donate"
-            }
-
-            Label {
-                anchors {
-                    left: parent.left
-                    leftMargin: Theme.paddingMedium
-                    right: parent.right
-                    rightMargin: Theme.paddingMedium
-                }
-                wrapMode: Text.Wrap
-                text: "Donate if you like my applications"
-            }
-            Button {
-                text: "PayPal Donate"
-                anchors.horizontalCenter: parent.horizontalCenter
-                onClicked: {
-                    Qt.openUrlExternally("https://paypal.me/sfoselro/5")
-                }
-            }
         }
     }
 }
